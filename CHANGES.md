@@ -1,5 +1,23 @@
 # Changes
 
+## edge-21.4.2
+
+This edge release is another candidate for `stable-2.10.1`!
+
+It includes some CLI fixes and addresses an issue where the outbound proxy
+could use an incorrect client for the request when running in ingress mode.
+
+Thank you to all of our users that have helped test and identify issues in 2.10!
+
+* Fixed an issue where the CLI would add the wrong annotation when using the
+  `--ingress` flag
+* Fixed a nil pointer dereference in `linkerd repair` caused by a mismatch
+  between CLI and server versions
+* Removed an unnecessary error handling condition in multicluster check
+  (thanks @wangchenglong01!)
+* Fixed a caching issue where incorrect clients could be used for requests
+  when outbound proxy runs in ingress mode
+
 ## edge-21.4.1
 
 This is a release candidate for `stable-2.10.1`!
